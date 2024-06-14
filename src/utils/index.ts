@@ -14,7 +14,7 @@ const randomize = () => {
 	return randomValue
 }
 
-const generateRandomKeys = (avaiableKeys: any[], amount: number) => {
+const generateRandomKeys = (avaiableKeys: string[], amount: number) => {
 	let data = []
 	for (let i = 0; i < amount; i++) {
 	  const randomIndex = Math.floor(Math.random() * avaiableKeys.length);

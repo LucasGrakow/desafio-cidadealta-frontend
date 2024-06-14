@@ -8,7 +8,7 @@ import KeyAnimation, { KeyCapVariant } from './animation';
 
 export default function Sequences({handleMinigameResult}: {handleMinigameResult: (status: string, startTime: Date) => void}) {
 	const [startTime] = useState<Date>(new Date());
-	const [keys, setKeys] =  useState<String[]>(() => {
+	const [keys, setKeys] =  useState<string[]>(() => {
 		return generateRandomKeys(sequencesData.usableKeys, sequencesData.maxKeys)
 	})
 	const [keyIndex, setKeyIndex] = useState<number>(0);
@@ -55,7 +55,7 @@ export default function Sequences({handleMinigameResult}: {handleMinigameResult:
 		<S.Container>
 			<Timebar percentage={convertNumberToPercentage(time, maxTime)} />
 			<S.KeyCapContainer>
-				{keys.map((item: any, index: number) => 
+				{keys.map((item: string, index: number) => 
 					<KeyAnimation error={error} index={index}>
 						{index === keyIndex 
 						?
